@@ -1,0 +1,82 @@
+<div style="position: relative;">
+    <ng-container *ngIf="secret == false">
+        <ng-container *ngIf="completed">
+            <div class="card-container-secret selected" (click)="setSelected(item)" [ngClass]="{
+                'selected': selected,
+                'hide': hide,
+                'wrong': (isValid === 'wrong')? true: false,
+                'success': (isValid === 'success')? true: false,
+                'completed': completed
+            }"> <!---->
+                <!--ICON AUDIO-->
+                <div class="card-header" style="position: relative;">
+                    <i class="fas fa-volume-up icon audio"></i>
+                    <div class="pronunciation">
+                        {{item.pronunciation}}
+                    </div>
+                </div>
+                <!--BODY-->
+                <div class="card-body">
+                    {{item.value}}
+                </div>
+                <!--REFERENCE-->
+                <div class="card-footer">
+                    <div *ngFor="let reference of item.references">
+                        <ng-container *ngIf="reference.value">
+                            <a [href]="reference.value" target="_blank" class="reference">{{reference.label}}</a>
+                        </ng-container>
+                        <ng-container *ngIf="!reference.value">
+                            <div class="reference-simple" style="color: rgb(39, 39, 39);">{{reference.label}}</div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="completed == false">
+            <div style="position: absolute; z-index: 1; top: calc(50% - 50px); left: calc(50% - 75px);"
+                class="card-container selected" (click)="setSelected(item)" [ngClass]="{
+                'selected': selected,
+                'hide': hide,
+                'wrong': (isValid === 'wrong')? true: false,
+                'success': (isValid === 'success')? true: false,
+                'completed': completed
+            }">
+                <!---->
+                <!--ICON AUDIO-->
+                <div class="card-header" style="position: relative;">
+                    <i class="fas fa-volume-up icon audio"></i>
+                    <div class="pronunciation">
+                        {{item.pronunciation}}
+                    </div>
+                </div>
+                <!--BODY-->
+                <div class="card-body">
+                    {{item.value}}
+                </div>
+                <!--REFERENCE-->
+                <div class="card-footer">
+                    <div *ngFor="let reference of item.references">
+                        <ng-container *ngIf="reference.value">
+                            <a [href]="reference.value" target="_blank" class="reference">{{reference.label}}</a>
+                        </ng-container>
+                        <ng-container *ngIf="!reference.value">
+                            <div class="reference-simple" style="color: rgb(39, 39, 39);">{{reference.label}}</div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="secret == true">
+        <div class="card-container-secret selected" (click)="setSelected(item)" [ngClass]="{
+            'selected': selected,
+            'hide': hide,
+            'wrong': (isValid === 'wrong')? true: false,
+            'success': (isValid === 'success')? true: false
+        }">
+            <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                <i class="far fa-question-circle" style="font-size: 4rem;"></i>
+            </div>
+        </div>
+    </ng-container>
+</div>

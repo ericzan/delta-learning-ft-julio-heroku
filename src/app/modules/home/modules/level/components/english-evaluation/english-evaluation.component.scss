@@ -1,0 +1,76 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .body-zan {
+    background-color: rgb(240, 37, 26);
+  }
+
+  .col-2-zan {    width: 0%;  }
+
+  .col-8-zan {    width: 100%;  }
+
+  .col-5-zan {    width: 30%;  }
+
+  .col-7-zan {    width: 70%;  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .body-zan {
+    background-color: rgb(29, 14, 241);
+  }
+
+  .col-2-zan {    width: 10%;  }
+
+  .col-8-zan {    width: 80%;  }
+
+  .col-5-zan {    width: 35%;  }
+
+  .col-7-zan {    width: 65%;  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .body-zan {
+    background-color: rgb(224, 227, 18);
+  }
+
+  .col-2-zan {    width: 20%;  }
+
+  .col-8-zan {    width: 60%;  }
+
+  .col-5-zan {    width: 40%;  }
+
+  .col-7-zan {    width: 60%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .body-zan {
+    background-color: rgb(3, 83, 14);
+  }
+
+  .col-2-zan {    width: 20%;  }
+
+  .col-8-zan {    width: 50%;  }
+
+  .col-5-zan {    width: 40%;  }
+
+  .col-7-zan {    width: 60%;  }
+}
+
+/* Extra large devices (large laptops and desktops, 1250px and up) */
+@media only screen and (min-width: 1250px) {
+  .body-zan {
+    background-color: rgb(222, 118, 228);
+  }
+
+  .col-2-zan {    width: 30%;  }
+
+  .col-8-zan {    width: 30%;  }
+
+  .col-5-zan {    width: 40%;  }
+
+  .col-7-zan {    width: 60%;  }
+}

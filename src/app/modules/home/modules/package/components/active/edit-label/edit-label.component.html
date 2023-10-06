@@ -1,0 +1,10 @@
+
+<div style="display: flex; gap: 5px; height: 50%; align-items: center;">
+
+    <div style="min-width: 85%;" >
+        <input pInputText  [(ngModel)]="labelValue"  [value]="item.label"/>
+    </div>
+    <div style="width: 15%;" (click)="submit()">
+        <i class="fas fa-paper-plane edit" style="font-size: 1.5rem" ></i>
+    </div>
+</div>

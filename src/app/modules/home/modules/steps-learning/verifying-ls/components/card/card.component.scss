@@ -1,0 +1,107 @@
+.card-container {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+    background-color: #FFB84D;
+    padding: 5px;
+    border-radius: 5px;
+    height: 210px;
+
+    .card-header {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.692);
+        }
+
+    }
+    
+    .card-body {
+        text-align: center;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-footer {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-direction: column;
+    }
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+
+.reference-simple,.reference{
+    font-size: 0.8rem;
+    color: #ff3606;
+    text-decoration: none;
+}
+.reference{
+    font-weight: 800;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.reference-simple{
+    color: rgb(46, 46, 46);
+}
+.selected{
+    box-shadow: none;
+    border: 2px dashed white;
+    &:hover{
+        cursor: default;
+    }
+}
+.hide{
+    box-shadow: none;
+    filter: brightness(50%);
+    &:hover{
+        cursor: default;
+    }
+}
+.wrong,.success{
+    box-shadow: none;
+    border: 2px dashed white;
+    &:hover{
+        cursor: default;
+    }
+}
+.wrong{
+    background-color: #FF3838 !important;
+}
+.success{
+    background-color: #4BFF88 !important;
+}
+.completed{
+    background-color: #4bff8785 !important;
+    box-shadow: none;
+    &:hover{
+        cursor: default;
+    }
+}
+.audio{
+    position: relative;
+}
+.pronunciation{
+    display: none;
+    position: absolute;
+    top: 45px;
+    padding: 3px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 1px 2px 2px 0px #4b4b4b87;
+}
+.audio:hover + .pronunciation{
+    display: block;
+}

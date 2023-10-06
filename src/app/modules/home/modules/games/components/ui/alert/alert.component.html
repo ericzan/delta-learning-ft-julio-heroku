@@ -1,0 +1,41 @@
+<p-dialog [(visible)]="inputo_MsjParams[0].ShowAlert" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+  [resizable]="false" (click)="Hidden_Msj()">
+
+  <div style="text-align: center;">
+
+    <div [ngSwitch]="inputo_MsjParams[0].TypeMessge">
+      <div *ngSwitchCase="'Error'">
+        <h3 style="font-size: 1.5rem; color: rgb(230, 20, 20);"> {{inputo_MsjParams[0].Messge}} </h3>
+      </div>
+      <div *ngSwitchCase="'Alert'">
+        <h3 style="font-size: 1.5rem; color: rgb(59, 207, 126);"> {{inputo_MsjParams[0].Messge}} </h3>
+      </div>
+      <div *ngSwitchCase="'Success'">
+        <h3 style="font-size: 1.5rem; color: rgb(40, 36, 238);"> {{inputo_MsjParams[0].Messge}} </h3>
+      </div>
+      <div *ngSwitchCase="'Exito'">
+        <h3 style="font-size: 1.5rem; color: rgb(40, 36, 238);"> {{inputo_MsjParams[0].Messge}} </h3>
+      </div>
+      <div *ngSwitchDefault>
+        <h3 style="font-size: 1.5rem; color: rgb(0, 0, 0);"> {{inputo_MsjParams[0].Messge}} </h3>
+      </div>
+    </div>
+
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 50px; padding-top: 25px;">
+      <div class="action">
+        <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+          <div [ngSwitch]="inputo_MsjParams[0].TypeMessge">
+            <div *ngSwitchCase="'Error'"> <i class="fas fa-undo-alt" style="font-size: 3rem"></i> </div>
+            <div *ngSwitchCase="'Alert'"> <i class="fas fa-thumbs-down" style="font-size: 3rem"></i> </div>
+            <div *ngSwitchCase="'Success'"> <i class="fas fa-thumbs-up" style="font-size: 3rem"></i> </div>
+            <div *ngSwitchCase="'Exito'"> <i class="fas fa-thumbs-up" style="font-size: 3rem"></i> </div>
+            <div *ngSwitchDefault> <i class="fas fa-undo-alt" style="font-size: 3rem"></i></div>
+          </div>
+        </div>
+        <p>{{inputo_MsjParams[0].Comment}}</p>
+      </div>
+
+    </div>
+  </div>
+</p-dialog>

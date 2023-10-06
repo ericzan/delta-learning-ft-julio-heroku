@@ -1,0 +1,8 @@
+{
+  "name": "delta-learning-ft",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

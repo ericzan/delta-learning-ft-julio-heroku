@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="container-left">
+        <img class="imagotipo" src="/assets/images/imagotipo.png" alt="">
+    </div>
+    <div class="container-right">
+        <h1 class="title">{{'recover.title' | translate}}</h1>
+        <h4 style="color: white;">{{'recover.subtitle' | translate}}</h4>
+        <form class="grid grid-container container-form " [formGroup]="structureForm" (ngSubmit)="submit()">
+            <div class="col-12 md:col-10">
+                <div class="grid grid-container">
+                    <div class="col-12">
+                        <label>{{'recover.form.user' | translate}}</label>
+                        <input pInputText id="username" formControlName="username" />
+                        <div style="height: 20px">
+                            <ng-container *ngIf="fieldValidate.focus(structureForm,'username')">
+                                <div class="message-error">{{'global.required' | translate}}</div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label>{{'recover.form.email' | translate}}</label>
+                        <input pInputText type="text" formControlName="email" />
+                        <div style="height: 30px">
+                            <ng-container *ngIf="fieldValidate.focus(structureForm,'email')">
+                                <div class="message-error">{{'global.required' | translate}}</div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="col-12" style="color: rgb(226, 50, 50); text-align: center;">
+                        {{messageError}}
+                    </div>
+                    <div class="col-12" style="justify-content: center; display: flex;">
+                        <p-button type="submit" label="{{'recover.form.send' | translate}}" [style]="{
+                            'width': '200px'
+                        }"></p-button>
+                    </div>
+                    <hr style="width: 100%; margin: 10px 0px">
+                    <div style="width: 100%; color: white; text-align: center; opacity: 0.8;">
+                        <a class="recovery-password" [routerLink]="['../sign-in']">{{'recover.retry_signin' |
+                            translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<p-dialog header="{{'recover.dialog_success.title' | translate}}" [(visible)]="displayDialog" [modal]="true" [style]="{ width: '50vw' }"
+    [draggable]="false" [resizable]="false">
+    <h3 style="text-align: center; padding-bottom: 10px; font-size: 1.5rem;">
+        {{'recover.dialog_success.body' | translate}}
+    </h3>
+    <div style="text-align: center;">
+        <p-button type="submit" label="{{'recover.retry_signin' | translate}}" [style]="{
+            'width': '200px'
+        }" [routerLink]="['../sign-in']"></p-button>
+    </div>
+</p-dialog>
+<app-loading></app-loading>

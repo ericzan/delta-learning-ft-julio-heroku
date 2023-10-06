@@ -1,0 +1,413 @@
+{
+  "configuration_Level_alert":
+  {
+    "view_level":
+    {
+      "label_confirm":"Confirmar ",
+      "label_back":"Regresar ",
+      "label_stop":"Terminar"
+    }
+  },
+  "configuration_Recommended":
+  {
+    "view_Recommended":
+    {
+      "title_pag_game":"Sitios recomendados"
+    }
+  },
+  "configuration_games":
+  {
+    "view_game":
+    {
+      "title_pag_game":"Seleccionar nuevo juego",
+      "label_game":"Juegos",
+      "label_select":"Seleccionar",
+      "txtt_butoon_create":"Crear"
+    },
+    "view_guess_word":
+    {
+      "title_pag_game":"Adivina la palabra",
+      "label_clues":"Pistas",
+      "label_length":"longitud",
+      "label_start_with":"comienza con",
+      "label_ends_with":"termina con",
+      "label_english_word":"Palabra inglés",
+      "label_grade":"Calificación",
+      "button_validate":"Validar"
+    },
+    "view_trying_word":
+    {
+      "title_pag_game":"Intentando la palabra",
+      "label_try_with":"Intenta con",
+      "label_already":"Intentos",
+      "label_English_word":"Palabra inglés",
+      "label_grade":"Calificación",
+      "button_validate":"Validar"
+
+
+    },
+    "puzzle_letters":
+    {
+      "title_pag_puzzle_letters":"ROMPECABEZAS DE LETRAS"
+
+    },
+    "puzzle_words":
+    {
+      "title_pag_puzzle_words":"ROMPECABEZAS DE PALABRAS"
+
+    },
+    "control_how_many":
+    {
+      "title_how_many_sentence":"CUÁNTAS ORACIONES PARA INTENTAR ",
+      "title_how_many":"CUÁNTAS PALABRAS PARA INTENTAR",
+      "label_adj":"Adj",
+      "label_Noun":"Sust",
+      "label_Adv":"Adv",
+      "label_Verb":"Verb",
+      "label_past_tense":"V. Pas",
+      "button_start":"Clic aquí para iniciar !!!"
+    },
+    "control_list_words":
+    {
+      "label_Average":"Promedio",
+      "label_guessed_words":"Palabras acertadas"
+    },
+    "control_drag_wors":
+    {
+      "label_drag_word":"Coloque las letras ordenadas aquí",
+      "label_drag_Sentence":"Ordene correctamente la sentencia aquí",
+      "button_validate":"Validar",
+      "label_grade":"Calificación"
+    }
+  },
+  "configuration_Level_evaluate":
+  {
+    "title_page_level_evaluation":
+    {
+      "title_page_select_level":"Seleccionar nueva evaluación del nivel de palabras",
+      "label_cbo_level":"Nivel a evaluar",
+      "label_placeholder":"Seleccionar",
+      "button_create":"Crear",
+      "title_page_level_evaluation_words":"Evaluación del nivel de palabras en inglés",
+      "label_question":"¿Conoces el significado y la pronunciación de estas palabras?",
+      "button_stop":"Alto",
+      "label_title_help":"Instrucciones",
+      "text_paragraph_1":"Puedes avanzar (10>, 100>>) y retroceder (<<100, <10) a través de las palabras para encontrar su nivel, cuando identifique el primer grupo de palabras con significado o pronunciación desconocido presione el botón ''Detener''. Este grupo de palabras será el comienzo de su nivel.",
+      "text_paragraph_2":"Posteriormente te invitamos a que jueges adivinando palabras para determinar si tu nivel fue correcto (Configuración/Juegos y selecciona ''Guess The Word''). Mientras más palabras intentes mejor será la confirmación del nivel señalado. (Sugerimos no menos de 50 palabras.)",
+      "button_close":"Cerrar"
+    }
+  },
+  "configuration_user_support":
+  {
+    "ask_for_supportoth":
+    {
+      "title_page":"Soporte",
+      "label_user":"Usuario:",
+      "label_name":"Nombre:",
+      "label_related":"Referente a:",
+      "label_subject":"Asunto:",
+      "label_datailed":"Descripción detallada:",
+      "button_send":"Enviar",
+      "button_cancel":"Cancelar"
+    }
+  },
+	"configuration_user": {
+		"change_password_form": {
+      "button_change_data": "Guardar",
+			"button_change_password": "Cambiar",
+			"current_password": "Contraseña actual",
+			"new_password": "Nueva contraseña",
+      "new_password_confirm": "Confirmar nueva contraseña",
+			"title": "Cambiar contraseña"
+		},
+		"configuration_form": {
+			"country_origin": "Pais de origen",
+			"country_residence": "Pais de residencia",
+			"email": "Correo",
+      "email_confirm": "Confirmar correo",
+      "recovery_email_account": "Correo electrónico de recuperación",
+      "recovery_email_account_confirm": "Confirmar correo electrónico de recuperación",
+
+
+			"full_name": "Nombre completo",
+			"lenguage": "Idioma nativo",
+			"selected_lenguage": "Seleccionar idioma",
+			"title": "Configuración",
+			"user": "Usuario"
+		},
+		"contact_form": {
+			"contact": "Contacto",
+			"email": "correo",
+			"name": "Nombre",
+			"title": "Contacto"
+		}
+	},
+	"dialog": {
+		"retry": {
+			"retry": "Reintentar",
+			"title": "No has podido completar la lección"
+		},
+		"success_step": {
+			"next": "Continuar",
+			"retry": "Volver a realizar",
+			"title": "Has finalizado exitosamente"
+		}
+	},
+	"global": {
+		"required": "Requerido.",
+		"selected": "Seleccionar",
+		"close": "Cerrar"
+	},
+	"navbar": {
+		"alt_img_logo": "imagotipo",
+		"alt_img_user": "imagen usuario",
+		"new_study": "Nuevo estudio",
+		"progress": "Progresos"
+	},
+	"new_study": {
+		"button_create": "Crear",
+		"category": "Categoria",
+		"subCategory": "SubCategoria",
+		"title": "Seleccionar nuevo estudio"
+	},
+	"packages": {
+		"actives": {
+			"new_package": "Crear nuevo paquete"
+		},
+		"tabs": {
+			"actives": "En proceso",
+			"archived": "Archivados"
+		},
+		"title": "Estudios pendientes"
+	},
+	"primeng": {
+		"accept": "Sí",
+		"addRule": "Añadir regla",
+		"am": "AM",
+		"apply": "Aplique",
+		"aria": {
+			"cancelEdit": "Cancelar edición",
+			"close": "Cerrar",
+			"collapseRow": "Fila Colapsada",
+			"editRow": "Editar fila",
+			"expandRow": "Fila expandida",
+			"falseLabel": "Falso",
+			"filterConstraint": "Restricción de filtro",
+			"filterOperator": "Operador de filtro",
+			"firstPageLabel": "Primera pagina",
+			"gridView": "Vista en cuadrícula",
+			"hideFilterMenu": "Ocultar menú de filtro",
+			"jumpToPageDropdownLabel": "Saltar al menú desplegable de página",
+			"jumpToPageInputLabel": "Saltar a entrada de página",
+			"lastPageLabel": "Ultima pagina",
+			"listView": "Vista de la lista",
+			"moveAllToSource": "Mover todo a la fuente",
+			"moveAllToTarget": "Mover todo al objetivo",
+			"moveBottom": "Mover abajo",
+			"moveDown": "Mover hacia abajo",
+			"moveTop": "Mover arriba",
+			"moveToSource": "Mover a la fuente",
+			"moveToTarget": "Mover al objetivo",
+			"moveUp": "Ascender",
+			"navigation": "Navegación",
+			"next": "Siguiente",
+			"nextPageLabel": "Página siguiente",
+			"nullLabel": "No seleccionado",
+			"pageLabel": "Página {page}",
+			"previous": "Anterior",
+			"previousPageLabel": "Página anterior",
+			"rotateLeft": "Girar a la izquierda",
+			"rotateRight": "Girar a la derecha",
+			"rowsPerPageLabel": "Filas por página",
+			"saveEdit": "Guardar Edición",
+			"scrollTop": "Desplazamiento superior",
+			"selectAll": "Todos los elementos seleccionados",
+			"selectRow": "Fila seleccionada",
+			"showFilterMenu": "Mostrar menú de filtros",
+			"slide": "Diapositiva",
+			"slideNumber": " {slideNumber}",
+			"star": "1 estrella",
+			"stars": " {star} estrellas",
+			"trueLabel": "Verdadero",
+			"unselectAll": "Todos los elementos sin seleccionar",
+			"unselectRow": "Fila no seleccionada",
+			"zoomImage": "Ampliar la imagen",
+			"zoomIn": "Ampliar",
+			"zoomOut": "Aleja el zoom"
+		},
+		"cancel": "Cancelar",
+		"choose": "Elija",
+		"chooseDate": "Elija la fecha",
+		"chooseMonth": "Elija el mes",
+		"chooseYear": "Elija el año",
+		"clear": "Despejado",
+		"completed": "Completado",
+		"contains": "Contiene",
+		"custom": "Personalizado",
+		"dateAfter": "La fecha es posterior a",
+		"dateBefore": "La fecha es anterior a",
+		"dateFormat": "MM/dd/aa",
+		"dateIs": "La fecha es",
+		"dateIsNot": "La fecha no es",
+		"dayNames": [
+			"Domingo",
+			"Lunes",
+			"Martes",
+			"Miércoles",
+			"Jueves",
+			"Viernes",
+			"Sábado"
+		],
+		"dayNamesMin": [
+			"SU",
+			"Mo",
+			"Tú",
+			"Nosotros",
+			"El",
+			"P.",
+			"Sa"
+		],
+		"dayNamesShort": [
+			"Sol",
+			"Mon",
+			"MAR",
+			"Miércoles",
+			"Jue",
+			"VIE",
+			"Sat"
+		],
+		"emptyFilterMessage": "No se han encontrado resultados",
+		"emptyMessage": "Opciones no disponibles",
+		"emptySearchMessage": "No se encontraron resultados",
+		"emptySelectionMessage": "Ningún elemento seleccionado",
+		"endsWith": "Termina con",
+		"equals": "Igual a",
+		"filter": "Filtrar",
+		"gt": "Mayor que",
+		"gte": "Mayor o igual a",
+		"lt": "Menor que",
+		"lte": "Menor o igual a",
+		"matchAll": "Coincidir todo",
+		"matchAny": "Coincidir cualquier",
+		"medium": "Medio",
+		"monthNames": [
+			"Enero",
+			"Febrero",
+			"Marzo",
+			"Abril",
+			"Mayo",
+			"Junio",
+			"Julio",
+			"Agosto",
+			"Septiembre",
+			"Octubre",
+			"Noviembre",
+			"Diciembre"
+		],
+		"monthNamesShort": [
+			"Jan",
+			"Feb",
+			"MAR",
+			"Abr",
+			"Mayo",
+			"Jun",
+			"Julio",
+			"Ago",
+			"Sep",
+			"Oct",
+			"Nov",
+			"Dec"
+		],
+		"nextDecade": "Próxima década",
+		"nextHour": "Próxima hora",
+		"nextMinute": "Siguiente minuto",
+		"nextMonth": "El próximo mes",
+		"nextSecond": "Siguiente",
+		"nextYear": "Proximo año",
+		"noFilter": "Sin filtro",
+		"notContains": "No contiene",
+		"notEquals": "No es igual",
+		"passwordPrompt": "Introduzca una contraseña",
+		"pending": "Pendiente",
+		"pm": "PM",
+		"prevDecade": "Década anterior",
+		"prevHour": "Hora anterior",
+		"prevMinute": "Minuto anterior",
+		"prevMonth": "Mes anterior",
+		"prevSecond": "Segundo anterior",
+		"prevYear": "Año anterior",
+		"reject": "No",
+		"removeRule": "Eliminar regla",
+		"searchMessage": "{0} los resultados disponibles",
+		"selectionMessage": "{0} elementos seleccionados",
+		"startsWith": "Comienza con",
+		"strong": "Fuerte",
+		"today": "Hoy",
+		"upload": "Subir",
+		"weak": "Débil",
+		"weekHeader": "Sm"
+	},
+	"progress": {
+		"title": "Progresos"
+	},
+	"recover": {
+		"dialog_success": {
+			"body": "Se te ha enviado un correo, revisa tu bandeja de entrada o spam.",
+			"title": "Recuperar contraseña"
+		},
+		"form": {
+			"email": "Correo",
+			"send": "Enviar",
+			"user": "Usuario"
+		},
+		"retry_signin": "Volver a iniciar sesión",
+		"subtitle": "Se te enviara un correo para poder recuperar tu contraseña.",
+		"title": "Recuperar Contraseña"
+	},
+	"section_steps": {
+		"learning": {
+			"button_next": "Continuar"
+		},
+		"message_congratulations": "Has finalizado exitosamente el paquete de palabras felicitaciones",
+		"shuffle": "Aleatorio",
+		"steps": {
+			"learning": "Aprendiendo",
+			"validating": "Validando",
+			"verifying_ce": "Verificando-ec",
+			"verifying_ls": "Verificando-es",
+			"verifying_vw": "Verificando-vs"
+		}
+	},
+	"signin": {
+		"forgot_your_password": "¿Has olvidado tu contraseña?",
+    "sign_up": "Si no tienes cuenta de acceso, Regístrate aquí.",
+    "updateLicence": "Actualizar licencia de uso",
+		"form": {
+			"message_invalid": "Usuario o contraseña inválidos",
+			"password": "Contraseña",
+			"signin": "Iniciar sesión",
+			"user": "Usuario"
+		},
+		"title": "Bienvenido"
+	}
+  ,
+  "singup":
+  {
+    "form":
+    {
+      "title":"Registro ",
+      "days":"PRUEBA GRATIS POR 7 DÍAS",
+      "label_user":"Usuario ",
+      "label_name":"Nombre ",
+      "label_password":"Password ",
+      "label_password_confirm":"Confirmar password",
+      "label_email":"Correo ",
+      "label_email_confirm":"Confirmar correo",
+      "button_send":"Enviar",
+      "label_return":"Volver a iniciar sesión ",
+      "label_dialog_title":"El proceso ha sido exitoso",
+      "label_dialog_body":"favor de revisar su correo electrónico.",
+      "button_close":"Regresar"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<zan-level-spinner [input_abrirSpinner]="p_AbrirSpinner"></zan-level-spinner>
+
+<zan-level-alert [inputo_MsjParams]="msjParamsAlert"  ></zan-level-alert>
+
+
+<div>
+  <div>
+    <h2 style="font-size: 1.5rem; font-weight: 400;">{{'configuration_Level_evaluate.title_page_level_evaluation.title_page_level_evaluation_words' | translate}}</h2>
+    <hr>
+  </div>
+
+  <form class="grid grid-container " (submit)="false">
+
+
+    <div class=" grid grid-container col-12">
+
+      <div class="col-2"></div>
+      <div class="col-8">
+        <h2   style="font-size: 1.5rem; font-weight: 400;"> {{'configuration_Level_evaluate.title_page_level_evaluation.label_question' | translate}}
+
+        </h2>
+
+
+      </div>
+      <div class="col-2"></div>
+
+    </div>
+
+
+
+    <div class=" grid grid-container col-12 ">
+      <div class="col-5-zan" style="text-align:center;    "></div>
+      <div class="col-7-zan" style="text-align:center;   ">
+        <ul style="text-align:left; ">
+          <li *ngFor="let item of List_Words_Level" style="text-align: left; width: 160px; ">
+
+            <p-button label="{{ item.word }}" styleClass="p-button-raised p-button-text  "> </p-button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div class=" grid grid-container  " style="width: 100%;  ">
+
+      <div class="col-2-zan" style="text-align:center;   "></div>
+      <div class=" grid grid-container   col-8-zan   " style="text-align:center;   ">
+
+
+            <div class="col-1" style="text-align:center;   "> </div>
+            <div class="col-2" style="text-align:center;    ">
+              <p-button type="button" label="<< 100" [style]="{'width': '70px'}" (onClick)="fn_less_100()"> </p-button>
+            </div>
+            <div class="col-2" style="text-align:center;   ">
+              <p-button type="button" label="< 10" [style]="{'width': '70px'}" (onClick)="fn_less_10()"> </p-button>
+            </div>
+            <div class="col-2" style="text-align:center;     ">
+              <p-button type="button" label="{{'configuration_Level_evaluate.title_page_level_evaluation.button_stop' | translate}}" [style]="{'width': '70px'}" (onClick)="fn_ShowMessage_cnf()">
+              </p-button>
+            </div>
+            <div class="col-2" style="text-align:center;   ">
+              <p-button type="button" label="10 > " [style]="{'width': '70px'}" (onClick)="fn_more_10()"> </p-button>
+            </div>
+            <div class="col-2" style="text-align:center;     ">
+              <p-button type="button" label="100 >> " [style]="{'width': '70px'}" (onClick)="fn_more_100()"> </p-button>
+            </div>
+            <div class="col-1" style="text-align:center;   ">
+              <p-button icon="fas fa-question"
+                      styleClass="p-button-rounded p-button-warning  "
+                      [style]="{ 'width':'35px' ,'height':'35px' }"
+                      (onClick)="fn_help()"   >  </p-button>
+            </div>
+            <div class="col-1" style="text-align:center;   ">  </div>
+
+      </div>
+      <div class="col-2-zan" style="text-align:center; "></div>
+
+    </div>
+
+
+
+  </form>
+</div>
+
+<p-dialog [(visible)]="verAyuda" [modal]="true" [style]="{ width: '80%' }" [draggable]="false"  [resizable]="false">
+      <p-card header="{{'configuration_Level_evaluate.title_page_level_evaluation.label_title_help' | translate}}">
+        <p class="m-0"> {{'configuration_Level_evaluate.title_page_level_evaluation.text_paragraph_1' | translate}}      </p>
+        <br>
+        <!-- &nbsp; -->
+        <p class="m-0"> {{'configuration_Level_evaluate.title_page_level_evaluation.text_paragraph_2' | translate}}       </p>
+
+        <ng-template pTemplate="footer">
+          <p-button label="{{'configuration_Level_evaluate.title_page_level_evaluation.button_close' | translate}} " (onClick)="fn_help()" ></p-button>
+      </ng-template>
+
+    </p-card>
+
+
+</p-dialog>

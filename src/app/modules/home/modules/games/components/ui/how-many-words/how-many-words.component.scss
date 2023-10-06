@@ -1,0 +1,120 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .body-zan {
+    background-color: rgb(240, 37, 26);
+  }
+
+  .col-4-zan-1 {    width: 70%;  }
+
+  .col-4-zan-2 {    width: 30%;  }
+
+  .col-4-zan-3 {    width: 30%;   padding-top: 10px; padding-bottom: 10px;   }
+
+  .col-4-zan-4 {    width: 30%;   padding-top: 10px; padding-bottom: 10px;   }
+
+  .col-4-zan-5 {    width: 30%;   padding-top: 10px; padding-bottom: 10px;   }
+
+  .col-4-zan-6 {    width: 30%;  padding-top: 10px; padding-bottom: 10px;   }
+
+  .col-4-zan-7 {    width: 30%;  padding-top: 10px; padding-bottom: 10px;   }
+
+  .col-4-zan-8 {    width: 100%;  }
+
+
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .body-zan {
+    background-color: rgb(160, 155, 235);
+  }
+
+  .col-4-zan-1 {    width: 71%;  }
+
+  .col-4-zan-2 {    width: 10%;    text-align: left;  }
+
+  .col-4-zan-3 {    width: 20%;  }
+
+  .col-4-zan-4 {    width: 20%;  }
+
+  .col-4-zan-5 {    width: 20%;  }
+
+  .col-4-zan-6 {    width: 20%;  }
+
+  .col-4-zan-7 {    width: 20%;  }
+
+  .col-4-zan-8 {    width: 100%;  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .body-zan {
+    background-color: rgb(224, 227, 18);
+  }
+
+  .col-4-zan-1 {    width: 53%;  }
+
+  .col-4-zan-2 {    width: 10%;  }
+
+  .col-4-zan-3 {    width: 10%;  }
+
+  .col-4-zan-4 {    width: 10%;  }
+
+  .col-4-zan-5 {    width: 10%;  }
+
+  .col-4-zan-6 {    width: 10%;  }
+
+  .col-4-zan-7 {    width: 15%;  }
+
+  .col-4-zan-8 {    width: 30%;  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .body-zan {
+    background-color: rgb(10, 237, 40);
+  }
+
+  .col-4-zan-1 {    width: 25%;  }
+
+  .col-4-zan-2 {    width: 7%;  }
+
+  .col-4-zan-3 {    width: 8%;  }
+
+  .col-4-zan-4 {    width: 8%;  }
+
+  .col-4-zan-5 {    width: 8%;  }
+
+  .col-4-zan-6 {    width: 8%;  }
+
+  .col-4-zan-7 {    width: 10%;  }
+
+  .col-4-zan-8 {    width: 20%;  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1250px and up) */
+@media only screen and (min-width: 1250px) {
+  .body-zan {
+    background-color: rgb(222, 118, 228);
+  }
+
+  .col-4-zan-1 {    width: 30%;  }
+
+  .col-4-zan-2 {    width: 15%;  }
+
+  .col-4-zan-3 {    width: 8%;  }
+
+  .col-4-zan-4 {    width: 8%;  }
+
+  .col-4-zan-5 {    width: 8%;  }
+
+  .col-4-zan-6 {    width: 8%;  }
+
+  .col-4-zan-7 {    width: 10%;  }
+
+  .col-4-zan-8 {    width: 20%;  }
+}

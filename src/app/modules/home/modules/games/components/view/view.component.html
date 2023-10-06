@@ -1,0 +1,29 @@
+<div>
+  <h2 style="font-size: 1.5rem; font-weight: 400;">{{'configuration_games.view_game.title_pag_game' | translate}}</h2>
+  <hr>
+</div>
+<div style="padding-top: 15vh;">
+
+  <form class="grid grid-container container-form" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="col-6">
+      <label>{{'configuration_games.view_game.label_game' | translate}}</label>
+      <p-dropdown formControlName="cboGame" [options]="listCategories" placeholder="{{'configuration_games.view_game.label_select' | translate}}">
+      </p-dropdown>
+
+      <div style="height: 50px">
+        <ng-container *ngIf="fieldValidate.focus(form,'cboGame')">
+          <div class="message-error">{{'global.required' | translate}}</div>
+        </ng-container>
+      </div>
+
+    </div>
+
+    <div class="col-12" style="justify-content: center; display: flex;">
+      <p-button type="submit" label="{{'configuration_games.view_game.txtt_butoon_create' | translate}}" [style]="{ 'width': '200px' }">
+      </p-button>
+    </div>
+
+  </form>
+
+
+</div>

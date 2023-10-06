@@ -1,0 +1,14 @@
+.container-packages{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px; 
+    padding-top: 10px;
+}
+.container-package{
+    box-shadow: 0px 4px 4px #00000062; border-radius: 5px; height: 90px; padding: 10px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}

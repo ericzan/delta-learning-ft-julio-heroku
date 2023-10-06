@@ -1,0 +1,53 @@
+<div style="display: flex; gap: 20px; padding: 0px 200px; ">
+    <!--REQUEST-->
+    <div  class="container-list grid-default" [ngClass]="{
+        'grid-5': gridMedium
+    }" style="width: 50%;">
+        <ng-container *ngFor="let item of listRequest">
+            <app-card  [item]="item" group="request" (onSelected)="selectedRequest($event)"></app-card>
+        </ng-container>
+    </div>
+    <!--RESPONSE-->
+    <div class="container-list grid-default response"  [ngClass]="{
+        'grid-5': gridMedium
+    }" style="width: 50%;">
+        <ng-container *ngFor="let item of listResponse">
+            <app-card [item]="item" group="response" (onSelected)="selectedResponse($event)"></app-card>
+        </ng-container>
+    </div>
+</div>
+
+<p-dialog [(visible)]="_display_dialog_success" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+    [resizable]="false">
+    <div style="text-align: center;">
+        <h3 style="font-size: 1.5rem; color: rgb(59, 207, 126);">{{messageSuccess}}</h3>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 50px; padding-top: 25px;">
+            <div class="action" (click)="clickRetry()">
+                <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-undo-alt" style="font-size: 3rem"></i>
+                </div>
+                <p>Volver a realizar</p>
+            </div>
+            <div class="action" (click)="clickNext()">
+                <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-angle-double-right" style="font-size: 4.5rem"></i>
+                </div>
+                <p>continuar</p>
+            </div>
+        </div>
+    </div>
+</p-dialog>
+<p-dialog [(visible)]="_display_dialog_warning" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false"
+    [resizable]="false">
+    <div style="text-align: center;">
+        <h3 style="font-size: 1.5rem; color: rgb(255, 100, 100);">No has podido completar la lección</h3>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 50px; padding-top: 25px;">
+            <div class="action" (click)="clickRetry()">
+                <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-undo-alt" style="font-size: 3rem"></i>
+                </div>
+                <p>Reintentar</p>
+            </div>
+        </div>
+    </div>
+</p-dialog>

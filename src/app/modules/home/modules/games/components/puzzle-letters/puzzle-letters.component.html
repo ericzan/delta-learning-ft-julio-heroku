@@ -1,0 +1,84 @@
+<zan-spinner [input_abrirSpinner]="openSpinner"></zan-spinner>
+
+
+<div>
+
+
+
+  <div>
+    <h2 style="font-size: 1.5rem; font-weight: 400;">{{'configuration_games.puzzle_letters.title_pag_puzzle_letters' | translate}}</h2>
+  </div>
+
+
+  <div class="col" [style]="{   padding: '0px 15px 0px 0px' }">
+    <zan-how-many-words (Output_list_Words_API)="fn_StarGame_Input($event)" [Input_koGame]="koGame"></zan-how-many-words>
+  </div>
+
+
+
+
+  <form class="grid grid-container container-form   "  (submit)="false"
+    [style]="{   padding: '10px 0px 0px 0px' }">
+
+
+
+    <div class="grid grid-container     " style="width: 100%;">
+
+      <div class="col-3-zan-1 " [style]="{  border: '2px solid blue',  borderRadius: '5px' }">
+        <zan-list-words [Input_Averge]="lbl_Averge"
+                        [Input_Div]="lbl_Div"
+                        [Input_List_Words_Process]="list_Words_process">
+        </zan-list-words>
+      </div>
+
+      <div class="col-3-zan-2"></div>
+
+
+      <div class="col-3-zan-3" [style]="{  border: '2px solid blue',  borderRadius: '5px' }">
+
+
+        <div class="row">
+
+                  <zan-drag-words [Input_Datalist]="Input_DataList"
+                                  [Input_placeholder]="INPUT_PLACE_HOLDER"
+                                  (Output_DataList)="fn_DataLisOutput($event)">
+                  </zan-drag-words>
+
+
+
+
+          <div class="grid grid-container   " style="text-align:left; ">
+
+                  <div class="col-1-zan-3" style="text-align: center;    "  >
+                      <p-button type="button" label="{{'configuration_games.control_drag_wors.button_validate' | translate}}"
+                              [style]="{ 'width': '80%' }"
+                              (click)="fn_Validate_click()" *ngIf="btn_visible"> </p-button>
+                  </div>
+                  <div class="col-1-zan-4" *ngIf="btn_visible" style="padding: 5px;   " >
+                        <b>{{'configuration_games.control_drag_wors.label_grade' | translate}}:</b>
+                        &nbsp;  {{lbl_Grade}}
+                  </div>
+                  <div  *ngIf="btn_visible"  style="width: 30px;  padding-left: 5px;   "  >
+                    <p-button icon="fas fa-volume-up "  styleClass="p-button-rounded p-button-warning p-button-text  "
+                    [style]="{ 'width': '30px','height':'30px' }"
+                     (onClick)="playAudio(link,true)"></p-button>
+                  </div>
+
+          </div>
+
+
+          <zan-games-alert [inputo_MsjParams]="msjParamsAlert" ></zan-games-alert>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+
+
+  </form>
+  <!-- <hr> -->

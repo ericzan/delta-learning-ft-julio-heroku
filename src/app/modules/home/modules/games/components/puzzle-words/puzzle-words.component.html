@@ -1,0 +1,58 @@
+<zan-spinner [input_abrirSpinner]="openSpinner"></zan-spinner>
+
+
+<div  >
+  <h2 style="font-size: 1.5rem; font-weight: 400;">{{'configuration_games.puzzle_words.title_pag_puzzle_words' | translate}}</h2>
+  <hr>
+</div>
+
+
+
+<zan-how-many-words-puzzle (Output_list_Words_API_2)="fn_StarGame_Input($event)" ></zan-how-many-words-puzzle>
+
+<div class="col-12"  ></div>
+
+
+<div class="grid grid-container   " style="width: 100%;"    >
+
+
+      <div class="col-3-zan-1"   [style]="{  border: '2px solid blue',  borderRadius: '5px' }"   >
+        <zan-list-words [Input_Averge]="lbl_Averge"
+                        [Input_Div]="lbl_Div"
+                        [Input_List_Words_Process]="list_Words_Process"  >
+        </zan-list-words>
+      </div>
+
+      <div class="col-3-zan-2"  ></div>
+
+      <div class="col-3-zan-3"   [style]="{  border: '2px solid blue',  borderRadius: '5px' }"    >
+        <zan-drag-words [Input_Datalist]="Input_DataList"
+                        [Input_placeholder]="INPUT_PLACE_HOLDER"
+                        (Output_DataList)="fn_DataLisOutput($event)">
+          </zan-drag-words>
+
+
+          <div class="grid grid-container     " style="width: 100%;  text-align:center;">
+                <div class="col-4-zan-2"  *ngIf="buttonVisible"    >
+                  <p-button type="button" label="{{'configuration_games.control_drag_wors.button_validate' | translate}}"
+                            [style]="{width: '100px' ,'text-align':'center' }"
+                            (onClick)="fn_ValidatData()"  >
+                  </p-button>
+                </div>
+                <div class="col-4-zan-3" *ngIf="buttonVisible" style="  text-align:left;  ; ;">
+                      <b>{{'configuration_games.control_drag_wors.label_grade' | translate}}: </b>
+                      &nbsp;  {{lbl_Grade}}
+
+                </div>
+          </div>
+
+
+      </div>
+</div>
+
+
+
+
+
+<zan-games-alert [inputo_MsjParams]="msjParamsAlert"  ></zan-games-alert>
+

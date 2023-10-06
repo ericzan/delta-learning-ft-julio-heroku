@@ -1,0 +1,71 @@
+<div class="container-navbar">
+  <div class="container-imagotipo">
+    <img src="/assets/images/imagotipo.png" alt="imagotipo">
+  </div>
+  <div>
+    <ul class="list">
+      <li [routerLink]="['./new-learning']">
+        <i class="fas fa-book-open"></i>
+        {{'navbar.new_study' | translate}}
+      </li>
+      <li [routerLink]="['./progress']">
+        <i class="fas fa-sort-amount-up-alt"></i>
+        {{'navbar.progress' | translate}}
+      </li>
+      <li class="container-info-user" (click)="menu.toggle($event)"  >
+        <i class="fas fa-cogs"></i>
+        <div class="info-user">
+          <p>{{infoUser.name}}</p>
+        </div>
+        <div class="container-image-user"   >
+          <img src="/assets/images/default-user.png" alt="image user">
+        </div>
+      </li>
+      <div class="card flex justify-content-center"   >
+        <p-menu #menu [model]="items" [popup]="true"   ></p-menu>
+      </div>
+      <li routerLink="/">
+        <i class="fas fa-door-open"></i>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container-navbar-movil movil">
+  <div class="container-imagotipo">
+    <img src="/assets/images/imagotipo.png" alt="{{'navbar.alt_img_user' | translate}}">
+  </div>
+  <div style="padding: 5px 15px;" class="menu" (click)="toggleMenuMovil()">
+    <i class="fas fa-bars" style="font-size: 1.5rem; color: white;"></i>
+  </div>
+  <div style="top: 40px; position: absolute; width: 100%; background-color: var(--base1, #081A32); z-index: 1000;"
+    class="movil menu-list" *ngIf="displayMenuMovil" [@fadeInOnEnter] [@fadeOutOnLeave]>
+    <ul class="list">
+      <li [routerLink]="['./new-learning']" (click)="toggleMenuMovil()">
+        <i class="fas fa-book-open"></i>
+        {{'navbar.new_study' | translate}}
+      </li>
+      <li [routerLink]="['./progress']" (click)="toggleMenuMovil()">
+        <i class="fas fa-sort-amount-up-alt"></i>
+        {{'navbar.progress' | translate}}
+      </li>
+      <li class="container-info-user" (click)="menu.toggle($event)"  >
+        <i class="fas fa-cogs"></i>
+        <div class="info-user">
+          <p>{{infoUser.name}}</p>
+        </div>
+        <div class="container-image-user">
+          <img src="/assets/images/default-user.png" alt="imagen usuario">
+        </div>
+      </li>
+      <div class="card flex justify-content-center" >
+        <p-menu #menu [model]="items" [popup]="true"    ></p-menu>
+      </div>
+      <li routerLink="/">
+        <i class="fas fa-door-open"></i>
+      </li>
+    </ul>
+  </div>
+</div>
+<div style="padding: 20px 20px;">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,28 @@
+.container-list {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+/* 8,16,32*/
+.grid-default{
+    grid-template-columns: repeat(4, 1fr);
+}
+/* 40*/
+.grid-5{
+    grid-template-columns: repeat(5, 1fr) !important;
+}
+
+:host::ng-deep .response app-card{
+    .card-container-secret {
+        background-color: #00B8AD;
+    } 
+    .card-container {
+        background-color: #00B8AD;
+    } 
+} 
+.action{
+    &:hover{
+        opacity: 0.7;
+        cursor: pointer;
+    }
+}

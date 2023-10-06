@@ -1,0 +1,29 @@
+<div class="row    "   >
+  <div class="grid grid-container      "  style="width: 100%;"  >
+
+    <div class="col-12  "   > </div>
+
+        <div class="col-12 col-1-zan-1  "   > </div>
+
+        <div class="col-12 col-1-zan-2  " style="background:rgb(59, 130, 246);color:white;   border-radius: 15px; text-align: center;">
+          <label     >
+            <b style="font-size:25px;"> {{'configuration_games.control_list_words.label_Average' | translate}}  &nbsp;    {{Input_Averge}}  </b>
+          </label>
+        </div>
+
+
+
+
+  </div>
+  <div class="col">
+    <b>{{'configuration_games.control_list_words.label_guessed_words' | translate}}: </b><label>{{ Input_Div }}</label>
+  </div>
+
+  <div class="col" *ngFor="let item of Input_List_Words_Process"  >
+    <label *ngIf="item.value == fn_Resta(Input_List_Words_Process)" style="background: #FFB84D;" > {{ item.value }} - {{ item.espaniol }}</label>
+    <label *ngIf="item.value != fn_Resta(Input_List_Words_Process)"  > {{ item.value }} - {{ item.espaniol }}</label>
+  </div>
+
+
+
+</div>

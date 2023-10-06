@@ -1,0 +1,10 @@
+.container-package{
+    box-shadow: 0px 4px 4px #00000062; border-radius: 5px; height: 90px; padding: 10px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
+.edit:hover{
+    opacity: 0.7;
+}

@@ -1,0 +1,46 @@
+<div>
+  <h2 style="font-size: 1.5rem; font-weight: 400;">{{'configuration_Level_evaluate.title_page_level_evaluation.title_page_select_level' | translate}}</h2>
+  <hr>
+</div>
+<div style="padding-top: 15vh;">
+
+
+
+
+
+  <form class="grid grid-container container-form  " [formGroup]="formLevel"  >
+
+    <div class="col-1-zan "  style="  text-align: center; " ></div>
+    <div class="col-2-zan  "  style="  text-align: center;  " >
+            <div class="col-12 col-sm-6"  style="  text-align: left; " >
+              <label  >{{'configuration_Level_evaluate.title_page_level_evaluation.label_cbo_level' | translate}}</label>
+            </div>
+
+            <div class="col-12 col-sm-6" style="text-align: left;" >
+              <p-dropdown formControlName="cboLevel" id="cboLevel" [options]="listLevel"  [style]="{ 'width': '100%' }"
+                          placeholder="{{'configuration_Level_evaluate.title_page_level_evaluation.label_placeholder' | translate}}">
+              </p-dropdown>
+              <div style="height: 50px">
+                <ng-container *ngIf="fieldValidate.focus(formLevel,'cboLevel')">
+                  <div class="message-error">{{'global.required' | translate}}</div>
+                </ng-container>
+              </div>
+            </div>
+            <div class="col-12 " style="justify-content: center; display: flex;">
+              <p-button type="button" label="{{'configuration_Level_evaluate.title_page_level_evaluation.button_create' | translate}}" [style]="{ 'width': '200px' }"
+              (onClick)="submit()">
+              </p-button>
+            </div>
+    </div>
+
+    <div class="col-3-zan"  style="  text-align: center;  " >  </div>
+
+
+
+
+
+
+  </form>
+
+
+</div>

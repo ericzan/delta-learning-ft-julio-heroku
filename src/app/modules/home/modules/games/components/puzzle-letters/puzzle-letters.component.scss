@@ -1,0 +1,143 @@
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  .body-zan {
+    background-color: rgb(240, 37, 26);
+  }
+
+  .col-2-zan-1 {    width: 10%;  }
+
+  .col-2-zan-2 {    width: 30%;  }
+
+  .col-2-zan-3 {    width: 30%;  }
+
+  .col-2-zan-4 {    width: 30%;  }
+
+
+  .col-1-zan-1 {    width: 40%;  }
+
+  .col-1-zan-2 {    width: 60%;  }
+
+  .col-1-zan-3 {    width: 40%;  }
+
+  .col-1-zan-4 {    width: 45%;  }
+
+  .col-1-zan-5 {    width: 25%;  }
+
+  .col-3-zan-1 {    width: 97%;  }
+
+  .col-3-zan-2 {    width: 0%;  }
+
+  .col-3-zan-3 {    width: 97%;  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 400px) {
+  .body-zan {
+    background-color: rgb(122, 115, 211);
+  }
+
+  .col-2-zan-1 {    width: 10%;  }
+
+  .col-2-zan-2 {    width: 30%;  }
+
+  .col-2-zan-3 {    width: 30%;  }
+
+  .col-2-zan-4 {    width: 30%;  }
+
+  .col-1-zan-1 {    width: 30%;  }
+
+  .col-1-zan-2 {    width: 70%;  }
+
+  .col-1-zan-3 {    width: 35%;  }
+
+  .col-1-zan-4 {    width: 30%;  }
+
+  .col-1-zan-5 {    width: 25%;  }
+
+  .col-3-zan-1 {    width: 97%;  }
+
+  .col-3-zan-2 {    width: 2%;  }
+
+  .col-3-zan-3 {    width: 97%;  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .body-zan {
+    background-color: rgb(224, 227, 18);
+  }
+
+  .col-2-zan-1 {    width: 10%;  }
+  .col-2-zan-2 {    width: 30%;  }
+
+  .col-2-zan-3 {    width: 30%;  }
+
+  .col-2-zan-4 {    width: 30%;  }
+
+  .col-1-zan-1 {    width: 25%;  }
+
+  .col-1-zan-2 {    width: 75%;  }
+
+  .col-1-zan-3 {    width: 40%;  }
+
+  .col-1-zan-4 {    width: 35%;  }
+
+  .col-1-zan-5 {    width: 25%;  }
+
+  .col-3-zan-1 {    width: 30%;  }
+
+  .col-3-zan-2 {    width: 2%;  }
+
+  .col-3-zan-3 {    width: 66%;  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .body-zan {
+    background-color: rgb(10, 237, 40);
+  }
+
+  .col-2-zan-1 {    width: 10%;  }
+
+  .col-2-zan-2 {    width: 20%;  }
+
+  .col-2-zan-3 {    width: 20%;  }
+
+  .col-2-zan-4 {    width: 20%;  }
+
+  .col-1-zan-1 {    width: 15%;  }
+
+  .col-1-zan-2 {    width: 50%;  }
+
+  .col-1-zan-3 {    width: 15%;  }
+
+  .col-1-zan-4 {    width: 30%;  }
+
+  .col-1-zan-5 {    width: 10%;  }
+
+
+  .col-3-zan-1 {    width: 29%;  }
+
+  .col-3-zan-2 {    width: 2%;  }
+
+  .col-3-zan-3 {    width: 68%;  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1250px and up) */
+@media only screen and (min-width: 1250px) {
+  .body-zan {
+    background-color: rgb(222, 118, 228);
+  }
+
+  .col-2-zan-1 {    width: 25%;  }
+
+  .col-2-zan-2 {    width: 13%;  }
+
+  .col-2-zan-3 {    width: 16%;  }
+
+  .col-2-zan-4 {    width: 15%;  }
+}

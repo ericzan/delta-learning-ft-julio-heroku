@@ -1,0 +1,29 @@
+<div>
+    <h2 style="font-size: 1.5rem; font-weight: 400;">{{'progress.title' | translate}}</h2>
+    <hr>
+</div>
+<div style="padding-top: 25px;" *ngFor="let item of listCategories">
+    <div style="padding-bottom: 10px;">
+        <h3 style="font-size: 1.3rem; font-weight: 400;">{{item.label}}</h3>
+        <hr>
+    </div>
+    <div class="grid grid-nogutter">
+        <ng-container *ngFor="let subCategory of item.listSubCategories" >
+
+            <div class="col-12 md:col-6 lg:col-4 xl:col-3 " style="padding: 5px;">
+                <div class="container-subcategory" [routerLink]="['../','package',subCategory.idSCat]">
+                    <div style="display: flex;">
+                        <i class="fas fa-circle" style="color: var(--base1,#081A32); padding-bottom: 8px;"></i>
+                        <h4 style="    text-overflow: ellipsis;
+                        overflow: hidden;"> {{subCategory.SCatName}}</h4>
+                    </div>
+                    <div><i class="fas fa-sort-amount-up" style="color: var(--base1,#081A32); padding-bottom: 8px;"></i> {{subCategory.learned}}</div>
+                    <div class="container-bar-progress">
+                        {{subCategory.totalwords}}
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<app-loading></app-loading>

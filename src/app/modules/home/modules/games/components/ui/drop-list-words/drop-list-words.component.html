@@ -1,0 +1,34 @@
+<div class="grid grid-container col-12" style="width: 100%;  "
+  [style]="{  border: '2px solid blue',  borderRadius: '5px' }">
+
+  <div style="padding:5px ; " *ngFor="let item of input_listWords_Des ">
+    <p-button type="button" label={{item.Value}} [style]="{    'background-color':'rgb(6, 155, 71)' }"
+      (onClick)="fn_ClickDes(item.Id)">
+    </p-button>
+  </div>
+
+</div>
+
+
+<div class="grid grid-container col-12" style="width: 100%;   "
+  [style]="{  border: '2px solid blue',  borderRadius: '5px' }">
+
+
+
+  <div style="padding:5px ;  " *ngFor="let item of input_listWords_Ori ">
+    <p-button type="button" label={{item.Value}} [style]="{    'background-color':'' }"
+      (onClick)="fn_ClickOri(item.Id)">
+    </p-button>
+  </div>
+
+
+
+
+</div>
+
+
+
+<div cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)"
+  style="width: 100%; background: rgb(64, 155, 155);">
+  <div *ngFor="let item of input_listWords_Ori " cdkDrag>{{item}}</div>
+</div>

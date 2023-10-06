@@ -1,0 +1,43 @@
+<div class="grid grid-container col  "     >
+
+
+        <div class=" grid grid-container  col-12"
+        [style]="{  border: '2px solid blue',  borderRadius: '5px'  }"
+
+        cdkDropList cdkDropListOrientation="horizontal"
+        #list_2="cdkDropList"
+        [cdkDropListData]="list_DataOutput"
+        [cdkDropListConnectedTo]="list_1"
+        (cdkDropListDropped)="drop($event)"   >
+
+           <div *ngIf="showIndication"  >
+                <b *ngIf="Input_placeholder == WORDS">{{'configuration_games.control_drag_wors.label_drag_word' | translate}} </b>
+                <b *ngIf="Input_placeholder == SENTENCES">{{'configuration_games.control_drag_wors.label_drag_Sentence' | translate}} </b>
+
+          </div>
+
+          <div cdkDrag   *ngFor="let item of list_DataOutput; let i = index "   style=" padding:5px  ; "   >
+            <p-button     type="button"   label={{item}}  (onClick)="onClickButton_02(i,item)"    [style]="{    'background-color':'' }"  >   </p-button>
+          </div>
+
+      </div>
+
+
+      <div  class=" grid grid-container   col-12  "
+          [style]="{  border: '2px solid blue',  borderRadius: '5px' }"
+
+          cdkDropList cdkDropListOrientation="horizontal"
+          #list_1="cdkDropList"
+          [cdkDropListData]="Input_Datalist"
+          [cdkDropListConnectedTo]="[list_2]"
+          (cdkDropListDropped)="drop($event)"   >
+
+          <div cdkDrag *ngFor="let item of Input_Datalist ; let i = index "  style=" padding:5px ; "   >
+            <p-button     type="button"   label={{item}} (onClick)="onClickButton_01(i,item)"   [style]="{    'background-color':'' }"  >   </p-button>
+          </div>
+
+      </div>
+
+
+
+</div>

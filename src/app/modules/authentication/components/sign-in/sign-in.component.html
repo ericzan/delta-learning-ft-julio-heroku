@@ -1,0 +1,124 @@
+<!-- <iframe src="https://buy.stripe.com/test_28oaFbcN9dR8fYsaFC" width="100%"></iframe> -->
+
+<div class="container">
+
+    <div class="container-left">
+        <img class="imagotipo" src="/assets/images/imagotipo.png" alt="">
+    </div>
+    <div class="container-right">
+        <h1 class="title">{{'signin.title' | translate}}</h1>
+        <form  class="grid grid-container container-form " [formGroup]="structureForm" (ngSubmit)="submit(true)">
+            <div class="col-12 md:col-10">
+                <div class="grid grid-container">
+                    <div class="col-12">
+                        <label >{{'signin.form.user' | translate}}</label>
+                        <input pInputText id="username" formControlName="username"/>
+                        <div style="height: 30px">
+                            <ng-container *ngIf="fieldValidate.focus(structureForm,'username')">
+                                <div class="message-error">{{'global.required' | translate}}</div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label>{{'signin.form.password' | translate}}</label>
+                        <input pInputText type="password" id="password" autocomplete="new-password" formControlName="password"/>
+                        <div style="height: 30px">
+                            <ng-container *ngIf="fieldValidate.focus(structureForm,'password')">
+                                <div class="message-error">{{'global.required' | translate}}</div>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="col-12"  style="color: rgb(226, 50, 50); text-align: center;">
+                        {{messageError}}
+                    </div>
+                    <div class="col-12" style="justify-content: center; display: flex;">
+                        <p-button type="submit" label="{{'signin.form.signin' | translate}}" [style]="{
+                            'width': '200px'
+                        }" ></p-button>
+                    </div>
+                    <hr style="width: 100%; margin: 10px 0px">
+                    <div style="width: 100%; color: white; text-align: center; opacity: 0.8;">
+                        <a class="recovery-password" style="font-size: .8rem; " [routerLink]="['../recovery']" >{{'signin.forgot_your_password' | translate}}</a>
+                    </div>
+
+                    <div style="width: 100%; color: white; text-align: center; opacity: 0.8; padding-top: 10px; ">
+                      <a class="recovery-password" style="color: yellow; font-size: .8rem; " [routerLink]="['../sing-up']" >{{'signin.sign_up' | translate}}</a>
+                    </div>
+                    <div style="width: 100%; color: white; text-align: center; opacity: 0.8; padding-top: 10px; cursor: pointer" (click)="submit(false)">
+                      <a class="recovery-password" style="color: yellow; font-size: .8rem; "  (click)="submit(false)" >{{'signin.updateLicence' | translate}}</a>
+                    </div>
+                    <div style="width: 100%; color: white; text-align: center; opacity: 0.8; padding-top: 10px; cursor: pointer" >
+                      <a style="color: yellow; font-size: .8rem; " target="_blank"
+                        href="https://www.youtube.com/watch?v=Maty-qn9nGM&list=PLTCEpwA_bosSGHrmJEUGgwKDi_w8KslaO">Guía de uso</a>
+
+                    </div>
+
+
+                    <div class="col-12">
+                        <img class="imagotipo" src="/assets/images/imagotipo-pre.png" alt="" style="width: 100%; object-fit: contain;">
+                    </div>
+                    <div style="width: 100%; color: white; text-align: center; opacity: 0.8; padding-top: 10px; ">
+                      <a class="recovery-password" style="color: yellow; font-size: .8rem; "  >v 1.0.0 </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<app-loading></app-loading>
+
+
+<p-dialog  class="col-panel"   [(visible)]="ShowDialog"  [modal]="true"   [draggable]="false"[resizable]="false" >
+
+  <div style="text-align: center;" *ngIf="showLabel">
+      <div>
+        <h3 style="font-size: 1.5rem; color: rgb(255, 255, 255); background: rgb(234, 20, 20);   border-radius: 15px; "> {{modalTitle}}</h3>
+      </div>
+      &nbsp;
+      <div *ngIf="showLabel">
+        <h3 style="font-size: 1rem; color: rgb(0, 0, 0);">  {{modalTitle02}}</h3>
+      </div>
+  </div>
+  &nbsp;
+  <div class="flex py-2 justify-content-center">
+      <form  class="grid grid-container container-form" [formGroup]="modalForm" >
+
+                <label style="  padding: 10px;" >{{cobLabel}}</label>
+
+
+              <p-dropdown formControlName="cboListOptions" (onChange)="descriptionCupon()" [options]="listCategories" placeholder="Seleccionar una opción . . .">    </p-dropdown>
+
+
+
+            <div style="height: 50px">
+                <ng-container *ngIf="fieldValidate.focus(modalForm,'cboListOptions')">
+                    <div class="message-error">{{'global.required' | translate}}</div>
+                </ng-container>
+            </div>
+      </form>
+  </div>
+  &nbsp;
+  <div class="flex py-2 justify-content-center" style="background: #FFB84D; border-radius: 15px; ">
+    <h3 style="font-size: 1rem; color: rgb(0, 0, 0);">  {{DescriptionCupon}}</h3>
+  </div>
+
+  &nbsp;
+  <div class="flex py-2 justify-content-center">
+    <h3 style="font-size: 1rem; color: rgb(0, 0, 0);">  {{acuerdo}} {{price_cupon}}</h3>
+  </div>
+  <div class="flex py-2 justify-content-center">
+    <h3 style="font-size: 1rem; color: rgb(0, 0, 0);"> Cupon :  {{cupon}} </h3>
+  </div>
+  <div class="grid grid-container col-12   ">
+      <div class="col-6">
+          <p-button type="button" label="{{buttonAceptar}}" [style]="{'width': '80%'}" (onClick)="payment()"  > </p-button>
+      </div>
+          <div class="col-6">
+            <p-button type="button" label="{{buttonCancelar}}" [style]="{'width': '80%'}"   (onClick)="paymentCancel()"></p-button>
+      </div>
+  </div>
+
+
+</p-dialog>
+
+

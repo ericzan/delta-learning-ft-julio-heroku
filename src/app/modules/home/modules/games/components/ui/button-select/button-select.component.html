@@ -1,0 +1,19 @@
+<div class="grid grid-container col-12" style="width: 100%;  ">
+
+  <div style="padding:5px ;  " *ngFor="let item of listValuesOptions ">
+
+    <p-button *ngIf="item.Visible" type="button" label={{item.Value}}
+      [style]="{ 'width': '50px',  'background-color':'' }" [disabled]="input_disabled"
+      (onClick)="fn_ChangeColor(item.Id)">
+    </p-button>
+
+    <p-button *ngIf="!item.Visible" type="button" label={{item.Value}}
+      [style]="{ 'width': '50px',  'background-color':'gray' }" [disabled]="input_disabled"
+      (onClick)="fn_ChangeColor(item.Id)">
+
+    </p-button>
+
+  </div>
+
+
+</div>

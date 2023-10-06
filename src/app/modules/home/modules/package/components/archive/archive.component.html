@@ -1,0 +1,16 @@
+<div class="grid grid-container" >
+    <ng-container *ngFor="let item of listPackages">
+        <div class="col-12 md:col-6 lg:col-4 xl:col-3" style="padding: 5px;">
+            <div class="container-package "  [routerLink]="['../../../../','steps',idSubCat,item.packageId,item.distinct_levs ]"
+            style="justify-content: center; align-items: center; display: flex; flex-direction: column;">
+            <h4><i class="fas fa-circle" style="color: #081A32; padding-bottom: 8px;"></i> {{item.label}}</h4>
+            <div><i class="fas fa-sort-amount-up" style="color: #081A32; padding-bottom: 8px;"></i>
+                {{item.distinct_levs | levelStep}}</div>
+        </div>
+        </div>
+    </ng-container>
+</div>
+<div >
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="0" [rows]="10" [totalRecords]="13" [rowsPerPageOptions]="[10, 20, 30]"></p-paginator>
+</div>
+<app-loading></app-loading>

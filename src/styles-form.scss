@@ -1,0 +1,19 @@
+.p-inputtext {
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+}
+.p-button:focus {
+    box-shadow: none;
+}
+.p-button {
+    width: 100%;
+    padding: 0.5rem;
+}
+.p-dropdown {
+    width: 100%;
+}
+.message-error {
+    padding-top: 5px;
+    color: #FF3838;
+}

@@ -1,0 +1,81 @@
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+{
+      .body-zan { background-color: rgb(240, 37, 26);  }
+
+
+      .col-3-zan-1 { width: 100%; }
+      .col-3-zan-2 { width: 0%; }
+      .col-3-zan-3 { width: 100%; }
+
+
+    .col-4-zan-1 { width: 0%; }
+    .col-4-zan-2 { width: 30%; }
+    .col-4-zan-3 { width: 50%; }
+    .col-4-zan-4 { width: 20%; }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+{
+      .body-zan { background-color: rgb(122, 115, 211);  }
+
+
+      .col-3-zan-1 { width: 30%; }
+      .col-3-zan-2 { width: 2%; }
+      .col-3-zan-3 { width: 68%; }
+
+      .col-4-zan-1 { width: 40%; }
+      .col-4-zan-2 { width: 30%; }
+      .col-4-zan-3 { width: 40%; }
+      .col-4-zan-4 { width: 10%; }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+{
+      .body-zan { background-color: rgb(224, 227, 18);  }
+
+
+      .col-3-zan-1 { width: 30%; }
+      .col-3-zan-2 { width: 2%; }
+      .col-3-zan-3 { width: 68%; }
+
+      .col-4-zan-1 { width: 40%; }
+      .col-4-zan-2 { width: 25%; }
+      .col-4-zan-3 { width: 35%; }
+      .col-4-zan-4 { width: 10%; }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+{
+    .body-zan { background-color: rgb(10, 237, 40);  }
+
+
+    .col-3-zan-1 { width: 30%; }
+    .col-3-zan-2 { width: 2%; }
+    .col-3-zan-3 { width: 68%; }
+
+    .col-4-zan-1 { width: 40%; }
+    .col-4-zan-2 { width: 20%; }
+    .col-4-zan-3 { width: 30%; }
+    .col-4-zan-4 { width: 5%; }
+}
+
+/* Extra large devices (large laptops and desktops, 1250px and up) */
+@media only screen and (min-width: 1250px)
+{
+    .body-zan { background-color: rgb(222, 118, 228);  }
+    .col-3-zan-1 { width: 30%; }
+    .col-3-zan-2 { width: 2%; }
+    .col-3-zan-3 { width: 68%; }
+
+    .col-4-zan-1 { width: 50%; }
+    .col-4-zan-2 { width: 15%; }
+    .col-4-zan-3 { width: 20%; }
+    .col-4-zan-4 { width: 5%; }
+
+}

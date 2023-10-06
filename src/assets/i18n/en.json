@@ -1,0 +1,413 @@
+{
+  "configuration_Level_alert":
+  {
+    "view_level":
+    {
+      "label_confirm":"Confirm ",
+      "label_back":"Back ",
+      "label_stop":"Stop "
+    }
+  },
+  "configuration_Recommended":
+  {
+    "view_Recommended":
+    {
+      "title_pag_game":"Recommended Links"
+    }
+  },
+  "configuration_games":
+  {
+    "view_game":
+    {
+      "title_pag_game":"Select new game",
+      "label_game":"Games",
+      "label_select":"Select",
+      "txtt_butoon_create":"Create"
+    },
+    "view_guess_word":
+    {
+      "title_pag_game":"Guess the word",
+      "label_clues":"Clues",
+      "label_length":"Length",
+      "label_start_with":"start with",
+      "label_ends_with":"ends with",
+      "label_english_word":"English Word",
+      "label_grade":"Grade",
+      "button_validate":"Validate"
+
+    },
+    "view_trying_word":
+    {
+      "title_pag_game":"TRYING THE WORD",
+      "label_try_with":"Try with ",
+      "label_already":"Already tried",
+      "label_English_word":"English word",
+      "label_grade":"Grade",
+      "button_validate":"validate"
+    },
+    "puzzle_letters":
+    {
+      "title_pag_puzzle_letters":"LETTERS PUZZLE"
+
+    },
+    "puzzle_words":
+    {
+      "title_pag_puzzle_words":"WORDS PUZZLE "
+
+    },
+    "control_how_many":
+    {
+      "title_how_many_sentence":"HOW MANY SENTENCES TO TRY ",
+      "title_how_many":"HOW MANY WORDS TO TRY ",
+      "label_adj":"Adj",
+      "label_Noun":"Noun",
+      "label_Adv":"Adv",
+      "label_Verb":"Verb",
+      "label_past_tense":"Past tense",
+      "button_start":"Here to Start !!!"
+    },
+    "control_list_words":
+    {
+      "label_Average":"Average",
+      "label_guessed_words":"Guessed Words"
+    },
+    "control_drag_wors":
+    {
+      "label_drag_word":"CORRECT WORD ORDER HERE",
+      "label_drag_Sentence":"CORRECT ORDER SENTENCE HERE",
+      "button_validate":"Validate",
+      "label_grade":"Grade"
+    }
+
+  },
+  "configuration_Level_evaluate":
+  {
+    "title_page_level_evaluation":
+    {
+      "title_page_select_level":"Select new word level assessment",
+      "label_cbo_level":"Level to evaluate",
+      "label_placeholder":"Select",
+      "button_create":"Create",
+      "title_page_level_evaluation_words":"English Words Level Evaluation",
+      "label_question":"Do you know the meaning and pronounciation of these words ?",
+      "button_stop":"Stop",
+      "label_title_help":"Instructions",
+      "text_paragraph_1":"You can move forward (10>, 100>>) and backward (<<100, <10) through the words to find your level, when you identify the first unknown meaning or pronunciation word group press the 'Stop' button. This word group will be the beginning of your level.",
+      "text_paragraph_2":"Later we invite you to play guessing words to determine if your level was correct (Settings / Games / Guess the word). The more words you try, the better the confirmation of the indicated level will be. (We suggest no less than 50 words.)",
+      "button_close":"Close"
+    }
+  },
+  "configuration_user_support":
+  {
+    "ask_for_supportoth":
+    {
+      "title_page":"Support",
+      "label_user":"User:",
+      "label_name":"Name:",
+      "label_related":"Related to:",
+      "label_subject":"Subject:",
+      "label_datailed":"Datailed Description:",
+      "button_send":"Send",
+      "button_cancel":"Cancel"
+    }
+  },
+	"configuration_user": {
+		"change_password_form": {
+      "button_change_data": "Save",
+			"button_change_password": "Change",
+			"current_password": "Current password",
+			"new_password": "New password",
+      "new_password_confirm": "Confirm new password",
+			"title": "Change password"
+		},
+		"configuration_form": {
+			"country_origin": "Country of origin",
+			"country_residence": "Country of residence",
+			"email": "Mail",
+      "email_confirm": "Confirm mail",
+      "recovery_email_account": "Recovery email account",
+      "recovery_email_account_confirm": "Confirm recovery email account",
+
+			"full_name": "Full name",
+			"lenguage": "Native language",
+			"selected_lenguage": "Selected lenguage",
+			"title": "Configuration",
+			"user": "User"
+		},
+		"contact_form": {
+			"contact": "Contact",
+			"email": "Mail",
+			"name": "Name",
+			"title": "Contact"
+		}
+	},
+	"dialog": {
+		"retry": {
+			"retry": "Retry",
+			"title": "You could not complete the lesson"
+		},
+		"success_step": {
+			"next": "Continue to",
+			"retry": "Retry",
+			"title": "You have successfully completed"
+		}
+	},
+	"global": {
+		"required": "Required.",
+		"selected": "Selected",
+		"close": "Close"
+	},
+	"navbar": {
+		"alt_img_logo": "imagotype",
+		"alt_img_user": "User Image",
+		"new_study": "New Study",
+		"progress": "Progress"
+	},
+	"new_study": {
+		"button_create": "Create",
+		"category": "Category",
+		"subCategory": "Subcategory",
+		"title": "Select new study"
+	},
+	"packages": {
+		"actives": {
+			"new_package": "Create new package"
+		},
+		"tabs": {
+			"actives": "In process",
+			"archived": "Archived"
+		},
+		"title": "Pending studies"
+	},
+	"primeng": {
+		"accept": "Yes",
+		"addRule": "Add Rule",
+		"am": "AM",
+		"apply": "Apply",
+		"aria": {
+			"cancelEdit": "Cancel Edit",
+			"close": "Close",
+			"collapseRow": "Row Collapsed",
+			"editRow": "Edit Row",
+			"expandRow": "Row Expanded",
+			"falseLabel": "False",
+			"filterConstraint": "Filter Constraint",
+			"filterOperator": "Filter Operator",
+			"firstPageLabel": "First Page",
+			"gridView": "Grid View",
+			"hideFilterMenu": "Hide Filter Menu",
+			"jumpToPageDropdownLabel": "Jump to Page Dropdown",
+			"jumpToPageInputLabel": "Jump to Page Input",
+			"lastPageLabel": "Last Page",
+			"listView": "List View",
+			"moveAllToSource": "Move All to Source",
+			"moveAllToTarget": "Move All to Target",
+			"moveBottom": "Move Bottom",
+			"moveDown": "Move Down",
+			"moveTop": "Move Top",
+			"moveToSource": "Move to Source",
+			"moveToTarget": "Move to Target",
+			"moveUp": "Move Up",
+			"navigation": "Navigation",
+			"next": "Next",
+			"nextPageLabel": "Next Page",
+			"nullLabel": "Not Selected",
+			"pageLabel": "Page {page}",
+			"previous": "Previous",
+			"previousPageLabel": "Previous Page",
+			"rotateLeft": "Rotate Left",
+			"rotateRight": "Rotate Right",
+			"rowsPerPageLabel": "Rows per page",
+			"saveEdit": "Save Edit",
+			"scrollTop": "Scroll Top",
+			"selectAll": "All items selected",
+			"selectRow": "Row Selected",
+			"showFilterMenu": "Show Filter Menu",
+			"slide": "Slide",
+			"slideNumber": "{slideNumber}",
+			"star": "1 star",
+			"stars": "{star} stars",
+			"trueLabel": "True",
+			"unselectAll": "All items unselected",
+			"unselectRow": "Row Unselected",
+			"zoomImage": "Zoom Image",
+			"zoomIn": "Zoom In",
+			"zoomOut": "Zoom Out"
+		},
+		"cancel": "Cancel",
+		"choose": "Choose",
+		"chooseDate": "Choose Date",
+		"chooseMonth": "Choose Month",
+		"chooseYear": "Choose Year",
+		"clear": "Clear",
+		"completed": "Completed",
+		"contains": "Contains",
+		"custom": "Custom",
+		"dateAfter": "Date is after",
+		"dateBefore": "Date is before",
+		"dateFormat": "mm/dd/yy",
+		"dateIs": "Date is",
+		"dateIsNot": "Date is not",
+		"dayNames": [
+			"Sunday",
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday"
+		],
+		"dayNamesMin": [
+			"Su",
+			"Mo",
+			"Tu",
+			"We",
+			"Th",
+			"Fr",
+			"Sa"
+		],
+		"dayNamesShort": [
+			"Sun",
+			"Mon",
+			"Tue",
+			"Wed",
+			"Thu",
+			"Fri",
+			"Sat"
+		],
+		"emptyFilterMessage": "No results found",
+		"emptyMessage": "No available options",
+		"emptySearchMessage": "No results found",
+		"emptySelectionMessage": "No selected item",
+		"endsWith": "Ends with",
+		"equals": "Equals",
+		"filter": "Filter",
+		"gt": "Greater than",
+		"gte": "Greater than or equal to",
+		"lt": "Less than",
+		"lte": "Less than or equal to",
+		"matchAll": "Match All",
+		"matchAny": "Match Any",
+		"medium": "Medium",
+		"monthNames": [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		],
+		"monthNamesShort": [
+			"Jan",
+			"Feb",
+			"Mar",
+			"Apr",
+			"May",
+			"Jun",
+			"Jul",
+			"Aug",
+			"Sep",
+			"Oct",
+			"Nov",
+			"Dec"
+		],
+		"nextDecade": "Next Decade",
+		"nextHour": "Next Hour",
+		"nextMinute": "Next Minute",
+		"nextMonth": "Next Month",
+		"nextSecond": "Next Second",
+		"nextYear": "Next Year",
+		"noFilter": "No Filter",
+		"notContains": "Not contains",
+		"notEquals": "Not equals",
+		"passwordPrompt": "Enter a password",
+		"pending": "Pending",
+		"pm": "PM",
+		"prevDecade": "Previous Decade",
+		"prevHour": "Previous Hour",
+		"prevMinute": "Previous Minute",
+		"prevMonth": "Previous Month",
+		"prevSecond": "Previous Second",
+		"prevYear": "Previous Year",
+		"reject": "No",
+		"removeRule": "Remove Rule",
+		"searchMessage": "{0} results are available",
+		"selectionMessage": "{0} items selected",
+		"startsWith": "Starts with",
+		"strong": "Strong",
+		"today": "Today",
+		"upload": "Upload",
+		"weak": "Weak",
+		"weekHeader": "Wk"
+	},
+	"progress": {
+		"title": "Progress"
+	},
+	"recover": {
+		"dialog_success": {
+			"body": "An email has been sent to you, check your inbox or spam.",
+			"title": "Recover Password"
+		},
+		"form": {
+			"email": "Email",
+			"send": "Submit",
+			"user": "User"
+		},
+		"retry_signin": "Sign back in",
+		"subtitle": "An email will be sent to you to recover your password.",
+		"title": "Recover Password"
+	},
+	"section_steps": {
+		"learning": {
+			"button_next": "Continue"
+		},
+		"message_congratulations": "You have successfully completed the word packet congratulations",
+		"shuffle": "Shuffle",
+		"steps": {
+			"learning": "Learning",
+			"validating": "Validating",
+			"verifying_ce": "Verifying-ce",
+			"verifying_ls": "Verifying-ls",
+			"verifying_vw": "Verifying-vw"
+		}
+	},
+	"signin": {
+		"forgot_your_password": "Have you forgotten your password?",
+    "sign_up": "If you do not have an access account, Sign Up here.",
+    "updateLicence": "License Upgrade",
+		"form": {
+			"message_invalid": "Invalid username or password",
+			"password": "Password",
+			"signin": "Sign in",
+			"user": "User"
+		},
+		"title": "Welcome"
+	}
+  ,
+  "singup":
+  {
+    "form":
+    {
+      "title":"Register your account",
+      "days":"7 - DAY FREE TRIAL",
+      "label_user":"User ",
+      "label_name":"Name ",
+      "label_password":"Password ",
+      "label_password_confirm":"Password confirm ",
+      "label_email":"EMail ",
+      "label_email_confirm":"EMail confirm",
+      "button_send":"Send",
+      "label_return":"Sign back in",
+      "label_dialog_title":"The process has been successful",
+      "label_dialog_body":"please check your inbox email",
+      "button_close":"Close"
+
+    }
+  }
+}

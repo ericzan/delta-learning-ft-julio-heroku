@@ -1,0 +1,48 @@
+<h2 class="title">Verifying LS</h2>
+<div class="container-list">
+    <ng-container *ngFor="let item of listResponse; let i = index">
+        <div class="container-cards">
+            
+            <app-card class="request" [item]="listRequest[i]" group="request" (onSelected)="selectedRequest($event)"></app-card>
+            <div style="padding: 10px;"></div>
+            <!--RESPONSE-->
+            <app-card class="response" [item]="listResponse[i]" group="response" (onSelected)="selectedResponse($event)"></app-card>
+        </div>
+    </ng-container>
+</div>
+<p-dialog [(visible)]="_display_dialog_success" [modal]="true"  [draggable]="false"
+    [resizable]="false">
+    <div style="text-align: center;">
+        <h3 style="font-size: 1.5rem; color: rgb(59, 207, 126);">{{'dialog.success_step.title' | translate}}</h3>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 50px; padding-top: 25px;">
+            <div class="action" (click)="clickRetry()">
+                <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-undo-alt" style="font-size: 3rem"></i>
+                </div>
+                <p>{{'dialog.success_step.retry' | translate}}</p>
+            </div>
+            <div class="action" (click)="clickNext()">
+                <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-angle-double-right" style="font-size: 4.5rem"></i>
+                </div>
+                <p>{{'dialog.success_step.next' | translate}}</p>
+            </div>
+        </div>
+    </div>
+</p-dialog>
+
+<p-dialog [(visible)]="_display_dialog_warning" [modal]="true" [draggable]="false"
+    [resizable]="false">
+    <div style="text-align: center;">
+        <h3 style="font-size: 1.5rem; color: rgb(255, 100, 100);">{{'dialog.retry.title' | translate}}</h3>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 50px; padding-top: 25px;">
+            <div class="action" (click)="clickRetry()">
+                <div style="height: 60px; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-undo-alt" style="font-size: 3rem"></i>
+                </div>
+                <p>{{'dialog.retry.retry' | translate}}</p>
+            </div>
+        </div>
+    </div>
+</p-dialog>
+<app-loading></app-loading>

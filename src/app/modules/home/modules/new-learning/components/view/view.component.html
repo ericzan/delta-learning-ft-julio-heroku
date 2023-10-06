@@ -1,0 +1,39 @@
+<div>
+    <h2 style="font-size: 1.5rem; font-weight: 400;">{{'new_study.title' | translate}}</h2>
+    <hr>
+</div>
+<div style="padding-top: 15vh;">
+    <form class="grid grid-container container-form " [formGroup]="form" (ngSubmit)="submit()">
+        <div class="col-12 md:col-6">
+            <div class="grid grid-container">
+                <div class="col-12 md:col-6">
+                    <label>{{'new_study.category' | translate}}</label>
+                    <p-dropdown formControlName="category" [options]="listCategories" placeholder="{{'global.selected' | translate}}"
+                        (onChange)="getSubCategies($event.value)"></p-dropdown>
+                    <div style="height: 50px">
+                        <ng-container *ngIf="fieldValidate.focus(form,'category')">
+                            <div class="message-error">{{'global.required' | translate}}</div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <label>{{'new_study.subCategory' | translate}}</label>
+                    <p-dropdown formControlName="subCategory" [options]="listSubCategories"
+                        placeholder="{{'global.selected' | translate}}"></p-dropdown>
+                    <div style="height: 50px">
+                        <ng-container *ngIf="fieldValidate.focus(form,'subCategory')">
+                            <div class="message-error">{{'global.required' | translate}}</div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="col-12" style="justify-content: center; display: flex;">
+                    <p-button type="submit" label="{{'new_study.button_create' | translate}}" [style]="{
+                        'width': '200px'
+                    }"></p-button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<app-loading></app-loading>
+<app-dialog-error ></app-dialog-error>

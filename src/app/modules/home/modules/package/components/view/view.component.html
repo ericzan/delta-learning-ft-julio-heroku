@@ -1,0 +1,12 @@
+<div>
+    <h2 style="font-size: 1.5rem; font-weight: 400;">{{'packages.title' | translate}}</h2>
+    <hr>
+</div>
+<div style="padding-top: 25px;">
+    <div style="padding-bottom: 10px;">
+        <h3 style="font-size: 1.3rem; font-weight: 400;">{{category}} > {{subCategory}}</h3>
+        <hr>
+    </div>
+    <p-tabMenu [model]="items"></p-tabMenu>
+    <router-outlet></router-outlet>
+</div>

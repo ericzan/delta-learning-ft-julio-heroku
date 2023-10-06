@@ -1,0 +1,50 @@
+<div class="grid grid-container">
+    <div class="col-12 md:col-6 lg:col-4 xl:col-3" style="padding: 5px;">
+        <div class="container-package " style="justify-content: center; align-items: center; display: flex;"
+            (click)="submit()">
+            <h4 style="font-size: 1.2rem; font-weight: 300;">{{'packages.actives.new_package' | translate}}</h4>
+        </div>
+    </div>
+    <ng-container *ngFor="let item of listPackages; index as i">
+
+        <div class="col-12 md:col-6 lg:col-4 xl:col-3" style="padding: 5px;">
+
+            <div class="container-package">
+                <div style="display: flex; gap: 5px; height: 50%; align-items: center;">
+                    <ng-container *ngIf="!item.edit">
+                        <div style="min-width: 85%;"
+                            [routerLink]="['../../../../','steps',idSubCat,item.packageId,item.distinct_levs ]">
+                            <h5 style="text-align:center;"><i class="fas fa-circle"
+                                    style="color: #081A32; padding-bottom: 8px;"></i> {{item.label}}
+                            </h5>
+                        </div>
+                        <div style="width: 15%;">
+                            <i class="far fa-edit edit" style="font-size: 1.5rem"
+                                (click)="listPackages[i].edit = true"></i>
+                        </div>
+                    </ng-container>
+                    <form>
+                        <ng-container *ngIf="item.edit">
+                            <app-edit-label [labelValue]="item.label" [item]="item"
+                                (close)="listPackages[i].edit = false; getPackages()"></app-edit-label>
+                        </ng-container>
+                    </form>
+                </div>
+                <div style="display: flex; gap: 5px; height: 50%; align-items: center;">
+                    <div style="min-width: 85%; text-align: center;"
+                        [routerLink]="['../../../../','steps',idSubCat,item.packageId,item.distinct_levs ]">
+                        <div>
+                            <i class="fas fa-sort-amount-up" style="color: #081A32; padding-bottom: 8px;"></i>
+                            {{item.distinct_levs | levelStep}}
+                        </div>
+                    </div>
+                    <div style="width: 15%;">
+                        <i class="fas fa-archive edit" style="font-size: 1.5rem"
+                            (click)="sendArchive(item.packageId)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
+<app-loading></app-loading>
