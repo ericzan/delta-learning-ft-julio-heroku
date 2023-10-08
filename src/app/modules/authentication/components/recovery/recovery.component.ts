@@ -20,7 +20,7 @@ export class RecoveryComponent implements AfterViewInit {
   @ViewChild(LoadingComponent) loading!: LoadingComponent;
   constructor(private route: Router, private fb: FormBuilder, protected fieldValidate: FieldValidateService, private http: HttpClient, private storageService: LocalStorageService) {
     this.structureForm = this.fb.group({
-      username: [, [Validators.required]],
+      // username: [, [Validators.required]],
       email: [, [Validators.required]]
     });
   }
@@ -33,7 +33,7 @@ export class RecoveryComponent implements AfterViewInit {
     }
     this.loading.setDisplay(true);
     this.messageError = '';
-    const userName = this.structureForm.value.username;
+    const userName = ""//this.structureForm.value.username;
     const email = this.structureForm.value.email;
     this.http.post(`${environment.apiUrl}/dt/auth/reset_pass_notification/`, {
       userId: userName,
