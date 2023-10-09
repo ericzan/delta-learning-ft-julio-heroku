@@ -21,7 +21,7 @@ export class EnglishEvaluationComponent implements OnInit {
   List_Words_Level: Array<{ word: string, prevmax: number, comment: string }> = [];
 
   limitNo: number = 10;
-  tartonNo: number = 0;
+  tartonNo: number = -1;
   setlevelNo: boolean = false;
   public msjParamsAlert: Array<{ TypeMessge: string, ShowAlert: boolean, Messge: string, Comment: string, ShowConfirm: boolean }> = [];
 
@@ -38,16 +38,23 @@ export class EnglishEvaluationComponent implements OnInit {
     this.p_AbrirSpinner = true;
     this.fn_ShowMessage_msj("", false, "", "", false, false);
 
-    this.fn_SearchData_API();
+    this.tartonNo = 0;
+    this.fn_SearchData_API(0);
     //this.fn_BuscaDatos_Mnual();
 
 
 
-    this._LevelService.STOP$.subscribe(data => {
-      if (data) {
-        // console.log(` ---- entro if: ${data}`);
+    this._LevelService.STOP$.subscribe(data =>
+      {
+      if (data)
+       {
+        console.log(` ---- entro if: ${data}`);
+        // debugger;
+
+         this.fn_SearchData_API_Guardo();
         this._LevelService.STOP$.next(false);
-        this.fn_Save_API();
+        // this.fn_Save_API();
+
       }
 
       // else { console.log(` ---- entro else: ${data}`); }
@@ -60,27 +67,30 @@ export class EnglishEvaluationComponent implements OnInit {
   fn_Save_API() {
 
     this.setlevelNo = true;
-    this.fn_SearchData_API();
-    window.location.reload();
+    this.fn_SearchData_API_Guardo();
+    // window.location.reload();
     // console.log("------- termina proceso-----------" + this.tartonNo);
     // this.router.navigate(['../home/main/progress']);
 
   }//----------------------------------
 
-  fn_SearchData_API() {
+  fn_SearchData_API(_li:number)
+  {
 
+    console.log (_li);
     this.p_AbrirSpinner = true;
 
-    debugger;
+
+
     this.uiOperGrService.getleval({
       orgId: "DTL-01",
       starton: this.tartonNo,
       limit: this.limitNo,
       word: "",
-      setlevel: this.setlevelNo,
-    }).subscribe((resp: any) => {
-      // console.log("- ---- respondio busqueda api------");
-      // console.log(resp);
+      setlevel:  false,
+    }).subscribe((resp: any) =>
+    {
+
       this.List_Words_Level = [];
 
 
@@ -109,7 +119,7 @@ export class EnglishEvaluationComponent implements OnInit {
 
       }
 
-      debugger;
+      // debugger;
 
     }, (_error) => {
       // console.log('----- erro API  (2)----');
@@ -178,27 +188,27 @@ export class EnglishEvaluationComponent implements OnInit {
   fn_more_10() {
     this.tartonNo = this.tartonNo + 10;
 
-    this.fn_SearchData_API();
+    this.fn_SearchData_API(10);
   }//----------------------------------------------
 
   fn_more_100() {
     this.tartonNo = this.tartonNo + 100;
 
-    this.fn_SearchData_API();
+    this.fn_SearchData_API(100);
   }//----------------------------------------------
 
   fn_less_10() {
     this.tartonNo = this.tartonNo - 10;
     if (this.tartonNo < 0) this.tartonNo = 0;
 
-    this.fn_SearchData_API();
+    this.fn_SearchData_API(400);
   }//----------------------------------------------
 
   fn_less_100() {
     this.tartonNo = this.tartonNo - 100;
     if (this.tartonNo < 0) this.tartonNo = 0;
 
-    this.fn_SearchData_API();
+    this.fn_SearchData_API(500);
   }//----------------------------------------------
 
 
@@ -215,5 +225,58 @@ export class EnglishEvaluationComponent implements OnInit {
   fn_help() {
 
     this.verAyuda = !this.verAyuda;
-  }
+  }//--------------------------------------------------------------
+
+
+
+
+
+
+
+  fn_SearchData_API_Guardo()
+  {
+
+    // debugger;
+    if (this.tartonNo ==0 ){return}
+    console.log ("----fn_SearchData_API_Guardo----")
+    this.p_AbrirSpinner = true;
+
+    this.uiOperGrService.getleval({
+      orgId: "DTL-01",
+      starton: this.tartonNo,
+      limit: this.limitNo,
+      word: "",
+      setlevel:  true,
+    }).subscribe((resp: any) =>
+    {
+
+      // this.List_Words_Level = [];
+      // this.p_AbrirSpinner = false;
+      window.location.reload();
+
+
+    }, (_error) =>
+    {
+
+      let _msj = "";
+
+      try { _msj = _error.error.detail.toString(); }
+      catch (e: any) {
+        _msj = " Error http://";
+        this.fn_BuscaDatos_Blanco();
+      }
+      finally { }
+
+
+      this.p_AbrirSpinner = false;
+      this.fn_ShowMessage_msj("Error", true, "Communication error http:// ", _msj, false, false);
+      return;
+
+    }
+
+    ); //---- suscribe
+
+
+  }//---------------------------------------------------
+
 }//-----------------------------------------------------------
