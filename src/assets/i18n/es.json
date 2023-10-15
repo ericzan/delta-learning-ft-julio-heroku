@@ -361,7 +361,7 @@
 			"user": "Usuario"
 		},
 		"retry_signin": "Volver a iniciar sesión",
-		"subtitle": "Se te enviara un correo para poder recuperar tu contraseña.",
+		"subtitle": "Se te enviará un correo para poder recuperar tu contraseña.",
 		"title": "Recuperar Contraseña"
 	},
 	"section_steps": {

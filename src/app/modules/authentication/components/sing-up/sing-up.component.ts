@@ -87,7 +87,7 @@ export class SingUpComponent implements OnInit
     }).subscribe((resp: any) =>
     {
 
-      console.log("---- registri ---",resp);
+      // console.log("---- registri ---",resp);
         this.loading.setDisplay(false);
         this.displayDialog = true;
 this.exito=true;
@@ -95,7 +95,7 @@ this.exito=true;
 
       }, (error) => {
 
-                        console.log("---- error ---",error);
+                        // console.log("---- error ---",error);
 
                         this.messageError = error.error.detail  + " : Lo lamento, intenta de nuevo!!! "
                         this.loading.setDisplay(false);

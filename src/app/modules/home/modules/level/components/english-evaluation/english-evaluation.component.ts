@@ -44,20 +44,17 @@ export class EnglishEvaluationComponent implements OnInit {
 
 
 
-    this._LevelService.STOP$.subscribe(data =>
-      {
-      if (data)
-       {
-        console.log(` ---- entro if: ${data}`);
-        // debugger;
+    this._LevelService.STOP$.subscribe(data => {
+      if (data) {
+        // console.log(` ---- entro if: ${data}`);
 
-         this.fn_SearchData_API_Guardo();
+        this.fn_SearchData_API_Guardo();
         this._LevelService.STOP$.next(false);
         // this.fn_Save_API();
 
       }
 
-      // else { console.log(` ---- entro else: ${data}`); }
+
 
     });
 
@@ -74,10 +71,9 @@ export class EnglishEvaluationComponent implements OnInit {
 
   }//----------------------------------
 
-  fn_SearchData_API(_li:number)
-  {
+  fn_SearchData_API(_li: number) {
 
-    console.log (_li);
+    console.log(_li);
     this.p_AbrirSpinner = true;
 
 
@@ -87,9 +83,8 @@ export class EnglishEvaluationComponent implements OnInit {
       starton: this.tartonNo,
       limit: this.limitNo,
       word: "",
-      setlevel:  false,
-    }).subscribe((resp: any) =>
-    {
+      setlevel: false,
+    }).subscribe((resp: any) => {
 
       this.List_Words_Level = [];
 
@@ -119,7 +114,7 @@ export class EnglishEvaluationComponent implements OnInit {
 
       }
 
-      // debugger;
+
 
     }, (_error) => {
       // console.log('----- erro API  (2)----');
@@ -233,12 +228,11 @@ export class EnglishEvaluationComponent implements OnInit {
 
 
 
-  fn_SearchData_API_Guardo()
-  {
+  fn_SearchData_API_Guardo() {
 
-    // debugger;
-    if (this.tartonNo ==0 ){return}
-    console.log ("----fn_SearchData_API_Guardo----")
+
+    if (this.tartonNo == 0) { return }
+    // console.log("----fn_SearchData_API_Guardo----")
     this.p_AbrirSpinner = true;
 
     this.uiOperGrService.getleval({
@@ -246,17 +240,14 @@ export class EnglishEvaluationComponent implements OnInit {
       starton: this.tartonNo,
       limit: this.limitNo,
       word: "",
-      setlevel:  true,
-    }).subscribe((resp: any) =>
-    {
+      setlevel: true,
+    }).subscribe((resp: any) => {
 
-      // this.List_Words_Level = [];
-      // this.p_AbrirSpinner = false;
+
       window.location.reload();
 
 
-    }, (_error) =>
-    {
+    }, (_error) => {
 
       let _msj = "";
 

@@ -147,7 +147,7 @@ export class SignInComponent implements OnInit, AfterViewInit {
         this.cobLabel = this.selected_lang == "es" ? resp.label01.es + ":" : resp.label01.en + ":";
 
 
-        this.acuerdo = "De cuerdo a tu selección el monto a pagar seá de : $ ";
+        this.acuerdo = "De cuerdo a tu selección el monto a pagar será de : $ ";
         if (
           this.selected_lang == "en") {
             this.acuerdo = "According to your selection, the amount to pay will be : $ ";

@@ -1,6 +1,5 @@
 export const environment = {
     production: true,
     //apiUrl: 'https://demo2177514.mockable.io/v1/delta-learning',
-    // apiUrl: 'https://fl-api-rest-9a28ab3b06c7.herokuapp.com'
-    apiUrl: 'https://dtl001-1158a6696bb9.herokuapp.com'
+    apiUrl: 'https://dtone-delthatech-bdae1e2e7073.herokuapp.com'
 };

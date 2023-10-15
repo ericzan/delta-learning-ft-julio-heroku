@@ -255,7 +255,7 @@ export class PuzzleWordsComponent implements OnInit {
 
 
     wordPuzzole = this.wordInProcessEnglishDrag.trim().toLowerCase();
-    console.log("  wordPuzzole -->  " + wordPuzzole + " wordSentence -->   " + wordSentence + " original --- >  "  + this.itemActualSentence)
+    // console.log("  wordPuzzole -->  " + wordPuzzole + " wordSentence -->   " + wordSentence + " original --- >  "  + this.itemActualSentence)
     debugger;
     if (wordPuzzole === wordSentence)
     {

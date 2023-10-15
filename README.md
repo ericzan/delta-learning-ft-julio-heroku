@@ -36,24 +36,4 @@ sincronizar cambios a otra plataforma
 npx cap sync
 
 
-    generar iconos android
-      cordova-res android --skip-config --copy
-      en apple se cambiarandrood por ios
-
-
-añadir android
-
-npx cap add android
-
-copiar android primera vez
-
-npx cap copy android
-
-sincronizar plataformas
-
-npx cap sync
-
-
--- es una prueba de git - zan -
-para abrir android studio
-npx cap open android
+   

@@ -1,6 +1,6 @@
 {
   "name": "delta-learning-ft",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
